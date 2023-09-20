@@ -2,6 +2,6 @@
 
 Data structures are fundamental components of computer science and programming!! 
 
-DSAlgo ~ Problem Solving!!
+## DSAlgo ~ Problem Solving!!
 
-Keep coding and learning :)
+### Eat, Sleep, Time Complexity, Repeat 
