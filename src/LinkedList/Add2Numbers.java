@@ -17,7 +17,8 @@ public class Add2Numbers {
     static Node head2;
 
     Node addTwoLists(Node list1, Node list2){
-        if(list1 == null || list2 == null) return list1!=null ? list1: list2;
+        if(list1 == null || list2 == null)
+            return list1!=null ? list1: list2;
 
         Node dummy = new Node(-1);
         Node res = dummy;

@@ -20,7 +20,7 @@ public class KlargestElementsInArray {
             }
         }
 
-        Iterator it = minHeap.iterator();
+        Iterator<Integer> it = minHeap.iterator();
         while(it.hasNext()) {
             System.out.print(it.next() + " ");
         }

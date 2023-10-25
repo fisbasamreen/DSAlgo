@@ -2,6 +2,19 @@ package src.Arrays;
 
 public class KadaneAlgorithm {
 
+    static int maxSubArray(int[] nums) {
+        int sum= 0, max= Integer.MIN_VALUE;
+
+        for(int i=0;i<nums.length;i++) {
+            sum = sum + nums[i];
+            max = Math.max(sum, max);
+            if(sum<0) {
+                sum = 0;
+            }
+        }
+        return max;
+    }
+
     static int maxSubArraySum(int a[],int size)
     {
 
@@ -24,10 +37,14 @@ public class KadaneAlgorithm {
     }
 
 
+
+
     public static void main (String[] args)
     {
         int [] a = {-2, -3, 4, -1, -2, 1, 5, -3};
         System.out.println("Maximum contiguous sum is " +
                 maxSubArraySum(a, a.length));
+
+        System.out.println("Maximum contiguous sum " + maxSubArray(a));
     }
 }

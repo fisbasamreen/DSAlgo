@@ -17,24 +17,24 @@ public class Merge2SortedLinkedList {
 
     static Node mergeLists(Node list1, Node list2){
         Node dummy = new Node(-1);
-        Node prev = dummy;
+        Node curr = dummy;
 
         Node c1 = list1;
         Node c2 = list2;
 
         while(c1!=null && c2!=null){
             if(c1.data<c2.data) {
-                prev.next = c1;
+                curr.next = c1;
                 c1 = c1.next;
             } else{
-                prev.next = c2;
+                curr.next = c2;
                 c2 = c2.next;
             }
 
-            prev = prev.next;
+            curr = curr.next;
         }
 
-        prev.next = c1 != null ? c1 : c2;
+        curr.next = c1 != null ? c1 : c2;
         return dummy.next;
     }
 

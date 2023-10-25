@@ -80,8 +80,5 @@ public class ODDEVEN {
 
         t1.start();
         t2.start();
-
-        t1.run();
-        t2.run();
     }
 }

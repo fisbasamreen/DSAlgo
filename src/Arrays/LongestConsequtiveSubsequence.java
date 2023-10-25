@@ -14,17 +14,14 @@ public class LongestConsequtiveSubsequence {
 
         for(int i=0;i<nums.length;i++) {
             if(!set.contains(nums[i]-1)) {
-
+                int currSequence = 0;
                 int j = nums[i];
 
                 while(set.contains(j)) {
                     j++;
+                    currSequence++;
                 }
-
-                if(res < j-nums[i]) {
-                    res = j-nums[i];
-                }
-
+                res = Math.max(res,currSequence);
             }
         }
         return res;

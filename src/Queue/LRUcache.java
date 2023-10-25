@@ -5,6 +5,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+/*
+This LRUCache class uses a doubly linked list to maintain the order of accessed items, and a hash map to efficiently retrieve items by key.
+The get and put operations are both designed to run in O(1) time complexity.
+ */
 public class LRUcache {
     Deque<Integer> doublyQueue = new LinkedList<>();
     HashMap<Integer,Integer> map = new HashMap<>();

@@ -37,6 +37,21 @@ public class BinaryTreeisBST {
         return true;
     }
 
+    private static boolean isBST(Node node, int min, int max) {
+        // Base case: An empty tree is a BST.
+        if (node == null) {
+            return true;
+        }
+
+        // Check if the current node's key is within the valid range.
+        if (node.data < min || node.data > max) {
+            return false;
+        }
+
+        // Recursively check the left and right subtrees.
+        return isBST(node.left, min, node.data - 1) && isBST(node.right, node.data + 1, max);
+    }
+
     public static void main(String args[])
     {
         BinaryTreeisBST tree = new BinaryTreeisBST();

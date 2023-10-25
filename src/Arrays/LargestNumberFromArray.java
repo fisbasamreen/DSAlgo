@@ -1,33 +1,14 @@
 package src.Arrays;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.Vector;
+import java.util.*;
 
 public class LargestNumberFromArray {
     static void printLargest(Vector<String> arr)
     {
+        Comparator<String> customComparator = (str1, str2) -> (str2 + str1).compareTo(str1 + str2);
 
-        Collections.sort(arr, new Comparator<String>()
-        {
-            // A comparison function which is used by
-            // sort() in printLargest()
-            @Override public int compare(String X, String Y)
-            {
+        Collections.sort(arr, customComparator);
 
-                // first append Y at the end of X
-                String XY = X + Y;
-
-                // then append X at the end of Y
-                String YX = Y + X;
-
-                // Now see which of the two
-                // formed numbers
-                // is greater
-                return XY.compareTo(YX) > 0 ? -1 : 1;
-            }
-        });
 
         Iterator it = arr.iterator();
 
