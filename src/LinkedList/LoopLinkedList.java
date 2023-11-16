@@ -24,6 +24,7 @@ public class LoopLinkedList {
                 break;
             }
         }
+
         if(slow_ptr == fast_ptr){
             slow_ptr = node;
             while(slow_ptr.next!=fast_ptr.next){
